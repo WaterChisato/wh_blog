@@ -104,6 +104,11 @@
             text-decoration: underline;
         }
        
+        .footer .icp-item {
+            display: inline-block;
+            margin: 0 15px;
+        }
+       
         @media (max-width: 768px) {
             h1 { font-size: 3.8rem; letter-spacing: 8px; }
             .status { font-size: 2.1rem; }
@@ -111,6 +116,7 @@
             .contact-btn { padding: 14px 36px; font-size: 1.2rem; }
             .container { padding: 50px 30px; }
             .footer { margin-top: 40px; font-size: 0.9rem; }
+            .footer .icp-item { display: block; margin: 8px 0; }
         }
     </style>
 </head>
@@ -132,7 +138,15 @@
         </div>
         
         <div class="footer">
-            <a href="https://icp.redcha.cn/beian/ICP-2025110220.html" title="茶ICP备2025110220号" target="_blank">茶ICP备2025110220号</a>
+            <span class="icp-item">
+                <a href="https://icp.redcha.cn/beian/ICP-2025110220.html" title="茶ICP备2025110220号" target="_blank">茶ICP备2025110220号</a>
+            </span>
+            <span class="icp-item">
+                <a href="https://icp.gov.moe/?keyword=20250348" target="_blank" style="display: inline-flex; align-items: center; white-space: nowrap;">
+                    <img style="width:1em; height:1em; margin-right: 0.5em;" src="https://icp.gov.moe/logo/men.png" alt="萌">
+                    萌ICP备20250348号
+                </a>
+            </span>
         </div>
     </div>
 </body>
