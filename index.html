@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
- <link rel="icon" href="http://logo.kf.waterchisato.top/pic/web_logo.jpeg" type="image/jpeg">
+    <link rel="icon" href="http://logo.kf.waterchisato.top/pic/web_logo.jpeg" type="image/jpeg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>水之蔻放 - 长期维护中</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;500;700&display=swap');
-        
+       
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+       
         body {
             min-height: 100vh;
             background: #000 url('http://logo.kf.waterchisato.top/tybj.jpg') center/cover no-repeat fixed;
@@ -20,7 +20,7 @@
             color: #fff;
             position: relative;
         }
-        
+       
         body::before {
             content: '';
             position: absolute;
@@ -28,7 +28,7 @@
             background: rgba(0, 0, 0, 0.65);
             z-index: 1;
         }
-        
+       
         .container {
             position: relative;
             z-index: 2;
@@ -40,7 +40,7 @@
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
             max-width: 92%;
         }
-        
+       
         h1 {
             font-size: 5.8rem;
             font-weight: 700;
@@ -48,13 +48,13 @@
             margin-bottom: 34px;
             text-shadow: 0 6px 20px rgba(0,0,0,0.9);
         }
-        
+       
         .status {
             font-size: 2.9rem;
             font-weight: 500;
             margin: 40px 0;
         }
-        
+       
         .info {
             font-size: 1.45rem;
             line-height: 2;
@@ -62,7 +62,7 @@
             max-width: 700px;
             margin: 0 auto 50px;
         }
-        
+       
         /* 联系按钮 */
         .contact-btn {
             display: inline-block;
@@ -78,38 +78,61 @@
             transition: all 0.4s ease;
             box-shadow: 0 8px 25px rgba(0,0,0,0.3);
         }
-        
+       
         .contact-btn:hover {
             background: rgba(255, 255, 255, 0.3);
             border-color: rgba(255, 255, 255, 0.7);
             transform: translateY(-4px);
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
         }
-        
+       
+        .footer {
+            margin-top: 60px;
+            opacity: 0.7;
+            font-size: 1rem;
+        }
+       
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.85;
+            transition: opacity 0.3s ease;
+        }
+       
+        .footer a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+       
         @media (max-width: 768px) {
             h1 { font-size: 3.8rem; letter-spacing: 8px; }
             .status { font-size: 2.1rem; }
             .info { font-size: 1.25rem; }
             .contact-btn { padding: 14px 36px; font-size: 1.2rem; }
             .container { padding: 50px 30px; }
+            .footer { margin-top: 40px; font-size: 0.9rem; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>水之蔻放</h1>
-        
+       
         <div class="status">网站正在进行长期维护</div>
-        
+       
         <div class="info">
             目前站点已暂停对外开放，恢复时间待定。<br>
             由此给您带来的不便，敬请谅解。
         </div>
-        
+       
         <a href="aboutme.html" class="contact-btn">联系我们 / 了解更多</a>
-        
+       
         <div style="margin-top: 50px; opacity: 0.8; font-size: 1rem;">
             感谢您一直以来的关注与支持
+        </div>
+        
+        <div class="footer">
+            <a href="https://icp.redcha.cn/beian/ICP-2025110220.html" title="茶ICP备2025110220号" target="_blank">茶ICP备2025110220号</a>
         </div>
     </div>
 </body>
