@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>站点维护中 - 正在跳转</title>
+    <!-- 5 秒后跳转 -->
+    <meta http-equiv="refresh" content="5;url=http://blog.tc.waterchisato.top">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+        .card {
+            max-width: 700px;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.9);
+            border-radius: 16px;
+            padding: 32px 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border: 1px solid rgba(148, 163, 184, 0.4);
+        }
+        .title {
+            font-size: 1.6rem;
+            margin-bottom: 16px;
+            color: #f9fafb;
+        }
+        .message {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #cbd5f5;
+            margin-bottom: 22px;
+        }
+        .highlight {
+            color: #38bdf8;
+            font-weight: 600;
+        }
+        .target-site {
+            color: #a5b4fc;
+            font-weight: 600;
+        }
+
+        /* 进度条 */
+        .progress-wrapper {
+            width: 100%;
+            height: 10px;
+            background: rgba(148, 163, 184, 0.2);
+            border-radius: 6px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            transition: width 0.2s linear;
+        }
+
+        footer {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 12px;
+            color: #9ca3af;
+            text-align: center;
+            border-top: 1px solid rgba(148, 163, 184, 0.2);
+            background: rgba(15, 23, 42, 0.95);
+        }
+        .icp-item {
+            margin: 0 6px;
+            white-space: nowrap;
+        }
+        .icp-item a {
+            color: #9ca3af;
+            text-decoration: none;
+        }
+        .icp-item a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 480px) {
+            .card {
+                padding: 24px 16px;
+            }
+            .title {
+                font-size: 1.3rem;
+            }
+            footer {
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="title">站点临时维护中</div>
+            <div class="message">
+                目前站点（blog）已暂停对外开放，恢复时间待定，<span class="highlight">由此给您带来的不便，敬请谅解</span>。<br>
+                正在跳转：<span class="target-site">水喝千束的吐槽站</span>
+            </div>
+
+            <!-- 进度条 -->
+            <div class="progress-wrapper">
+                <div id="progress" class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <span class="icp-item">
+            <a href="https://icp.redcha.cn/beian/ICP-2025110220.html" title="茶ICP备2025110220号" target="_blank">茶ICP备2025110220号</a>
+        </span>
+        <span class="icp-item">
+            <a href="https://icp.gov.moe/?keyword=20250348" target="_blank" style="display: inline-flex; align-items: center; white-space: nowrap;">
+                <img style="width:1em; height:1em; margin-right: 0.5em;" src="https://icp.gov.moe/logo/men.png" alt="萌">
+                萌ICP备20250348号
+            </a>
+        </span>
+    </footer>
+
+    <script>
+        // 5 秒进度条动画
+        let progress = document.getElementById("progress");
+        let width = 0;
+        let interval = setInterval(() => {
+            width += 2; // 每 100ms 增加 2% → 5 秒到 100%
+            if (width >= 100) {
+                width = 100;
+                clearInterval(interval);
+            }
+            progress.style.width = width + "%";
+        }, 100);
+    </script>
+</body>
+</html>
